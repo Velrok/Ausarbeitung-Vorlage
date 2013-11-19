@@ -5,3 +5,9 @@
 *.make
 *.fls
 *.pdf
+*.temp
+*.bbl
+*.blg
+*.lof
+*.lot
+*.toc
