@@ -1,13 +1,47 @@
-\documentclass[11pt,a4paper]{scrartcl}
+\documentclass[11pt,a4paper,headsepline,footsepline]{scrartcl}
+
+\usepackage[left=4cm,right=2cm,top=2.5cm,bottom=1cm,includeheadfoot]{geometry}
+% stellt latex auf deutsch
+% Damit werden bestimmte überschriften übersetzt.
+\usepackage{ngerman} 
+\usepackage[utf8]{inputenc} % damit versteht latex utf8 und somit Umlaute
+
+\usepackage[T1]{fontenc} % für mehr Zeichen
+\renewcommand*\familydefault{\sfdefault} % use san serif font
+\usepackage{lmodern} % modern font
+\usepackage{titlesec} % redifice headdings
+
+\titleformat*{\section}{\bfseries}
+
+\usepackage[round]{natbib} % für Zitat
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.5em}
+
 
 \begin{document}
 
-\section{Kapitel 1}
+\author{Max Mustermann}
+\title{Excelente Ausarbeitung mit Latex.}
+\maketitle 
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+\pagenumbering{roman}
+\newpage
+\tableofcontents
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+\newpage
+\listoffigures % Abbildungsverzeichnis
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+\newpage
+\listoftables % Tabellenverzeichnis
+
+
+\newpage
+\pagenumbering{arabic}
+\include{Inhalt}
+
+\newpage
+\bibliographystyle{alphadin}
+\bibliography{literatur}
 
 \end{document}
